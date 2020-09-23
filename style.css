@@ -1,0 +1,15 @@
+.jumbotron {
+    background-color: rgb(167, 112, 157);
+}
+
+h1, form {
+    font-family: 'Maven Pro', sans-serif;
+}
+
+body {
+    background-color: rgb(248, 228, 246);
+}
+.card-header {
+    font-family: 'Maven Pro', sans-serif;
+    background:rgb(167, 112, 157);
+}
