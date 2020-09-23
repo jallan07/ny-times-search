@@ -6,20 +6,18 @@ $(document).ready(function () {
 		e.preventDefault();
 		// grab the search term and set it to a variable
 		var term = $("#search-term").val();
+		var termArr = term.split(" ");
+		var search = termArr.join("+");
 		// grab the number of records and set it to a variable
 		var numRecords = $("#num-records").val();
-		console.log(numRecords);
 		// collect begin date and store it in a variable
 		var begin = $("#begin").val();
-
 		// collect begin date and store it in a variable
 		var end = $("#end").val();
-
-		console.log(end);
 		// api key
 		var key = "MW06HUr3j0I3WAD31mwbWRocnrddSPcg";
 		// dynamically create the queryURL
-		var queryURL = `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${term}&api-key=${key}`;
+		var queryURL = `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${search}&api-key=${key}`;
 		console.log(queryURL);
 		// if the user defines a begin year, then add it to the query
 		if (begin != "") {
@@ -36,7 +34,6 @@ $(document).ready(function () {
 			url: queryURL,
 			method: "GET",
 		}).then(function (nyTimes) {
-			console.log(nyTimes);
 			var count = 1;
 			// pulls the number of records requested by the user
 			for (var i = 0; i < numRecords; i++) {
