@@ -11,10 +11,10 @@ $(document).ready(function () {
 		console.log(numRecords);
 		// collect begin date and store it in a variable
 		var begin = $("#begin").val();
-		begin = "begin_date=" + begin + "0101";
+
 		// collect begin date and store it in a variable
 		var end = $("#end").val();
-		end = "end_date=" + end + "1231";
+
 		console.log(end);
 		// api key
 		var key = "MW06HUr3j0I3WAD31mwbWRocnrddSPcg";
@@ -23,10 +23,12 @@ $(document).ready(function () {
 		console.log(queryURL);
 		// if the user defines a begin year, then add it to the query
 		if (begin != "") {
+			begin = "begin_date=" + begin + "0101";
 			queryURL = queryURL + "&" + begin;
 		}
 		// if the user defines a end year, then add it to the query
 		if (end != "") {
+			end = "end_date=" + end + "1231";
 			queryURL = queryURL + "&" + end;
 		}
 		// call the api and retrieve a response
