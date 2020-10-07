@@ -1,6 +1,12 @@
 # NY Times Article Search
 
-Create a basic NY Article Search
-# ny-times-search
-# ny-times-search
-# ny-times-search
+## Project Overview
+
+This practice exercise focuses on creating an API call, and returning the data received from the API call to display for the user. It is a simple article search. 
+
+## Resources Used
+
+- jQuery
+- NYTimes API (https://developer.nytimes.com/apis)
+- Javascript
+- Bootstrap CSS Framework
